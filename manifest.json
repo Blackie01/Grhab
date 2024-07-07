@@ -5,11 +5,16 @@
   "description": "Take screenshots of pages and convert them to PDF for downloads",
  
   "permissions": [
+    "storage",
     "activeTab",
-    "scripting", 
-    "tabs"
+    "scripting"
   ],
-  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
   "action": {
     "default_icon": {              
       "16": "logo.png",   
@@ -17,9 +22,19 @@
       "32": "logo.png"    
     },
     "default_title": "Grhab",   
-    "default_popup": "index.html"  
+    "default_popup": "popup.html"  
   },
   "background": {
     "service_worker": "background.js"
+  },
+  "commands": {
+    "capture-screenshot": {
+      "suggested_key": {
+         "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Capture a screenshot"
+    }
   }
+
 }

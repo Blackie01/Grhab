@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grhab</title>
+    <script src="jsPDF-2.5.0/dist/jspdf.umd.min.js"></script>
+  <script src="popup.js"></script>
+
+    <style>
+      body {
+        border: 1px solid gray;
+        width: max-content;
+        padding: 2rem;
+      }
+
+      #logo {
+        color: rgba(128, 128, 128, 0.5);
+      }
+      button {
+        background-color: aquamarine;
+        border: none;
+        padding: 0.3rem 0.7rem;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+
+  </head>
+  <body>
+    <p id="logo">Grhab</p>
+      <button id="downloadBtn" >Download</button>
+    <div id="nameInputDiv" style="display: none;">
+      <input type="text" id="docName" placeholder="Give your document a name"/>
+      <button id="saveBtn">Save</button>
+    </div>
+  </body>
+
+
+</html>
