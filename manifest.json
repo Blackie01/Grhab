@@ -3,7 +3,6 @@
   "name": "Grhab",
   "version": "1.0",
   "description": "Take screenshots of pages and convert them to PDF for downloads",
- 
   "permissions": [
     "storage",
     "activeTab",
@@ -30,11 +29,16 @@
   "commands": {
     "capture-screenshot": {
       "suggested_key": {
-         "default": "Ctrl+Shift+Y",
-        "mac": "Command+Shift+Y"
+        "default": "Ctrl+Shift+U",
+        "mac": "Command+Shift+U"
       },
       "description": "Capture a screenshot"
     }
-  }
-
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["jspdf.umd.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
